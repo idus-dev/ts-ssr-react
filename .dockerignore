@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules
+npm-debug.log
+
+# Optional npm cache directory
+.npm
+
+.git
+.gitignore
+
+# project folders
+dev
+dist
+
+*.md
