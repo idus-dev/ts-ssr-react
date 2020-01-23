@@ -48,7 +48,7 @@ const client = {
         ]
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx','.ts','.tsx']
+        extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -92,7 +92,7 @@ const server = {
         ]
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx','.ts','.tsx']
+        extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
     },
     plugins: [new webpack.DefinePlugin({ __isBrowser__: 'false' })]
 };

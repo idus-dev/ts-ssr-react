@@ -1,27 +1,27 @@
-import { Router } from "express";
+import { Router } from 'express';
 
 const todoRoutes = () => {
-  const router = new Router();
-  const todos = [{ id: 1, text: "server-fetched todo" }];
+    const router = new Router();
+    const todos = [{ id: 1, text: 'server-fetched todo' }];
 
-  router.get("/api/todos", (_req: any, res: any) => {
-    setTimeout(() => {
-      res.json(todos);
-    }, 300);
-  });
+    router.get('/api/todos', (_req: any, res: any) => {
+        setTimeout(() => {
+            res.json(todos);
+        }, 300);
+    });
 
-  router.post("/api/todos", (req: any, res: any) => {
-    const newTodo = req.body;
-    newTodo.id = Date.now();
+    router.post('/api/todos', (req: any, res: any) => {
+        const newTodo = req.body;
+        newTodo.id = Date.now();
 
-    todos.push(newTodo);
+        todos.push(newTodo);
 
-    setTimeout(() => {
-      res.json(newTodo);
-    }, 100);
-  });
+        setTimeout(() => {
+            res.json(newTodo);
+        }, 100);
+    });
 
-  return router;
+    return router;
 };
 
 export default todoRoutes;
